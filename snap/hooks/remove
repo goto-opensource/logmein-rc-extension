@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rm -f /etc/xdg/autostart/logmein-rc-server.desktop
+rm -f /usr/share/gdm/autostart/LoginWindow/logmein-rc-server.desktop

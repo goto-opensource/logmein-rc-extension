@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp -f ${SNAP}/scripts/logmein-rc-server.desktop /etc/xdg/autostart/
+cp -f ${SNAP}/scripts/logmein-rc-server.desktop /usr/share/gdm/autostart/LoginWindow/

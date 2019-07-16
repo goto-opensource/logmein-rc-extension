@@ -1,0 +1,34 @@
+name: logmein-rc-extension
+version: '1.0'
+summary: The Remote Control extension for the LogMeIn Host Software (Beta) for Linux
+icon: snap/gui/icon.png
+base: core18
+description: |-
+ LogMeIn allows you to access your computers from any device.
+
+ The `logmein-host` extension snap enables the Remote Control feature.
+
+ For more information on LogMeIn for Linux and how to attach your host to your account, try the developer website.
+
+grade: stable
+confinement: classic
+
+parts:
+  x11vnc:
+    plugin: nil
+    stage-packages: [ x11vnc ]
+  x11vnc-scripts:
+    plugin: dump
+    source: ./scripts
+    organize:
+      '*': scripts/
+
+apps:
+  for-login:
+    command: scripts/logmein-rc-server.sh
+    daemon: simple
+    restart-condition: always
+    plugs: [ network, network-bind, x11 ]
+  for-user:
+    command: scripts/logmein-rc-server.sh
+    plugs: [ network, network-bind, x11 ]

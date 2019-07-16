@@ -1,0 +1,12 @@
+# Copy to $HOME/.config/autostart/
+[Desktop Entry]
+Type=Application
+Exec=/snap/bin/logmein-rc-server.for-user
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+Name[en_US]=LogMeIn Remote Control Extension Server
+Name=LogMeIn Remote Control Extension Server
+Comment[en_US]=
+Comment=
+X-GNOME-Autostart-Phase=Initialization
