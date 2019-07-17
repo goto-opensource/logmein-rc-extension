@@ -28,7 +28,5 @@ apps:
     command: scripts/logmein-rc-server.sh
     daemon: simple
     restart-condition: always
-    plugs: [ network, network-bind, x11 ]
   for-user:
     command: scripts/logmein-rc-server.sh
-    plugs: [ network, network-bind, x11 ]
